@@ -56,7 +56,13 @@
 //TODO: 4 ===================================
 // скористаємося циклом while та виведіть у консоль числа від 0 до 50
 
-
+// let i = 0;
+// while (i <= 50) {
+//   console.log(i);
+//   i += 1;
+// }
+// i = i + 1
+// i++ don't use very bad
 
 //TODO: 5 ===================================
 //Використовуючи конструкцію if...else,
@@ -68,12 +74,31 @@
 
 // const question = prompt('Яка «офіційна» назва JavaScript?').toLowerCase();
 
+// question === "ecmascript" ? alert("Вірно!") : alert("Не знаєте? ECMAScript!");
+
+// 1 == "1" ? console.log("одне") : console.log("не одне");  // "одне"
+// 1 === "1" ? console.log("одне") : console.log("не одне"); // "не одне"
+
 //TODO: 6 ===================================
 // Напишіть програму, яка отримає від користувача
 //число (кількість хвилин) і виведе у консоль
 //рядок у форматі годин і хвилин
 //70 === 01:10
 // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
+
+// const globalMinutes = 70;
+// const hour = 60;
+
+// const hours = String(Math.floor(globalMinutes / hour)).padStart(2, 0);
+// const minutes = String(globalMinutes % hour).padStart(2, 0);
+
+// console.log(hours);
+// console.log(minutes);
+
+// console.log(`${hours}:${minutes}`);
+
+// console.log(Math.ceil(1.1));  // 2
+// console.log(Math.floor(1.99)); // 1
 
 //TODO: 7 ===================================
 //Напишіть цикл, який виводить у консоль
