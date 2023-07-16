@@ -81,9 +81,42 @@
 //   user.hobby = 'skydiving';
 //   user.premium = false;
 // // for(const value of Object.keys(user)) {
-// //     console.log(`${value}:${user[value]}`); 
+// //     console.log(`${value}:${user[value]}`);
 // // }
 
 //  user.greet()
 // console.log(user);
  
+
+//TODO:============task-6================
+// Створіть функцію multiplyNumeric(obj),
+// яка множить всі числові властивості об'єкта obj на 2.
+
+// до виклику функції
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: 'My menu',
+// };
+
+// function multiplyNumeric(obj) {
+
+//     for (let key in obj) {
+//         console.log(key);
+//         if (obj.hasOwnProperty(key)) {
+//             if (typeof obj[key] === "number") {
+//              obj[key] *= 2
+//             }
+       
+
+//         }
+//     }
+//     return obj
+// }
+// console.log(multiplyNumeric(menu))
+// після виклику функції
+// menu = {
+// width: 400,
+// height: 600,
+// title: "My menu"
+// };
