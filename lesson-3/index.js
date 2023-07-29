@@ -58,3 +58,94 @@
 
 // console.log(findElement(numbers, isEven));
 // console.log(findElement(words, startWithO));
+
+//TODO:=========task-04=================
+// Дано масив чисел [1, 2, 3, 4, 5]. Створіть новий масив, що містить квадрати кожного елементу вхідного масиву. Очікуваний результат: [1, 4, 9, 16, 25].
+
+// const arr = [1, 2, 3, 4, 5];
+
+// const newArr = arr.map(numb => Math.pow(numb, 2));
+
+// console.log(newArr);
+// console.log('arr',arr);
+
+//TODO:=========task-05=================
+// Дано масив об'єктів {id: 1, values: [1, 2, 3]}, {id: 2, values: [4, 5, 6]}, {id: 3, values: [7, 8, 9]}. Створіть новий масив, що містить всі значення з масивів values кожного об'єкту, збережених в одному масиві. Очікуваний результат: [1, 2, 3, 4, 5, 6, 7, 8, 9].
+
+// const data = [
+//     { id: 1, values: [1, 2, 3] },
+//     { id: 2, values: [4, 5, 6] },
+//     { id: 3, values: [7, 8, 9] }];
+
+// const newData = data.flatMap(({ values }) => values );
+// console.log(newData);
+// console.log(data);
+
+//TODO:=========task-06=================
+// Дано масив об'єктів {name: "John", age: 27}, {name: "Jane", age: 31}, {name: "Bob", age: 19}. Перевірте, чи є хоча б один об'єкт з віком менше 20 років. Очікуваний результат: true.
+
+// const people =
+//     [{ name: "John", age: 27 },
+//     { name: "Jane", age: 31 },
+//     { name: "Bob", age: 19 }];
+    
+// const checkAge = people.some(({ age }) => age < 20);
+// console.log(checkAge);
+
+
+//TODO:=========task-07=================
+//  Дано масив чисел [2, 4, 6, 8, 10]. Перевірте, чи є кожен елемент масиву парним. Очікуваний результат: true.
+
+// const numbers = [2, 4, 6, 8, 10];
+
+// const evenNumbers = arr => arr.every(numb => numb % 2 === 0);
+// console.log(evenNumbers(numbers));
+
+
+//TODO:=========task-08=================
+// Знайдіть перше непарне число
+
+// const numbers = [2, 1, 6, 8, 9, 10, 12];
+
+// const numb = numbers.find(numb => numb % 2 !== 0);
+
+// console.log(numb)
+// console.log(numbers);
+
+
+//TODO:=========task-09=================
+// Відсортуйте масив чисел [4, 2, 5, 1, 3] у порядку зростання. Очікуваний результат: [1, 2, 3, 4, 5].
+
+// const numbers = [4, 2, 5, 1, 3];
+// const words = ['g', 's', 'a', 'j', 'i', 'c'];
+
+// const sortNumbers = [...numbers].sort((a, b) => a - b);
+// const sortNumbersB = [...numbers].sort((a, b) => b - a);
+// console.log(sortNumbers);
+// console.log(sortNumbersB);
+
+// const sortWords = [...words].sort((a, b) => a.localeCompare(b));
+// const sortWordsB = [...words].sort((a, b) => b.localeCompare(a));
+// console.log(sortWords);
+// console.log(sortWordsB);
+
+//TODO:=========task-10=================
+// Дано масив об'єктів {name: "John", age: 27}, {name: "Jane", age: 31}, {name: "Bob", age: 19}. Створіть новий масив, що містить тільки об'єкти, в яких вік більше 20 років. Очікуваний результат: [{name: "John", age: 27}, {name: "Jane", age: 31}]
+
+// const users =
+//     [{ name: "John", age: 27 },
+//     { name: "Jane", age: 31},
+//     { name: "Bob", age: 19}];
+
+// const newUsers = users.filter(({ age }) => age > 20);
+// console.log(newUsers);
+
+//TODO:=========task-11=================
+// Дано масив чисел [1, 2, 3, 4, 5]. Застосуйте метод reduce для обчислення суми елементів масиву
+
+// const arr = [1, 2, 3, 4, 5];
+
+// const newArr = arr.reduce((acc, numb, idx, arr) => acc += numb, 0)
+// console.log(newArr);
+
+
