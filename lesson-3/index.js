@@ -148,4 +148,57 @@
 // const newArr = arr.reduce((acc, numb, idx, arr) => acc += numb, 0)
 // console.log(newArr);
 
+//TODO:=========task-05=================
+/**
+  |============Person================
+  | Cтворіть клас `Person`, який містить наступні властивості:
+  |  - `name` - ім'я людини;
+  |  - `age`- вік людини;
+  |  - `gender` - стать людини;
+  |  - `email`- електронна пошта людини.
+  |
+  | ##### Крім того, клас `Person` має мати метод `getDetails()`, який повертає об'єкт з ім'ям, віком, статтю та електронною поштою людини.
+  |============================
+*/
 
+/**
+  |=============Employee===============
+  |Створіть клас `Employee`, який розширює клас `Person` і містить наступні властивості:
+  |  - salary - зарплата співробітника;
+  |  - department - відділ, в якому працює співробітник.
+  |  ##### Крім того, клас `Employee` має мати метод `getEmployeeDetails()`, який повертає об'єкт з ідентифікатором співробітника, зарплатою та відділом, в якому працює співробітник.
+  |============================
+*/
+// class Person {
+//     constructor(name, age, gender, email) {
+//         this.name = name;
+//         this.age = age;
+//         this.gender = gender;
+//         this.email = email;
+//     }
+//     getDetails() {
+//         return {
+//         name: this.name,
+//         age: this.age,
+//         gender: this.gender,
+//         email: this.email,
+//     }
+// }
+// }
+// class Employee extends Person {
+//     constructor(name, age, gender, email, salary, department) {
+//         super(name, age, gender, email);
+//         this.salary = salary;
+//         this.department = department;
+//     }
+//     getEmployeeDetails() {
+//         return {
+//             ...this.getDetails,
+//             salary: this.salary,
+//             department: this.department,
+//         }
+        
+//     }
+// }
+// const employee = new Employee();
+// console.log(employee.getEmployeeDetails());
