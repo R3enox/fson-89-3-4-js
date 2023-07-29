@@ -149,3 +149,45 @@
 // console.log(newArr);
 
 
+//this
+
+// const user = {
+//     firstName: 'John',
+//     lastName: 'Doe',
+//     age: 30,
+//     email: 'johndoe@example.com',
+  
+//     info() {
+//       console.log(this);
+//     },
+  
+//    };
+
+//TODO:=========task-12=================
+//  Викликати метод user.info() таким чином, щоб він вивів результатом  ({name: 'Bob', lactName: 'Lasso',age: 50, email: 'BodLasso@gmail.com'})
+
+// const obj = {
+//     name: 'Bob',
+//     lastName: 'Lasso',
+//     age: 50,
+//     email: 'BodLasso@gmail.com',
+//   };
+// console.log(user.info.call(obj));
+
+
+//TODO:=========task-13=================
+// Виправте помилки, щоб код працював
+
+// const product = {
+//     price: 5000,
+  
+//     showPrice() {
+//       console.log(this.price);
+//     },
+//   };
+  
+//   function callAction(callback) {
+//     callback();
+//   }
+  
+//   callAction(product.showPrice.bind(product));
