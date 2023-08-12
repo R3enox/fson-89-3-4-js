@@ -39,3 +39,7 @@ img {
   max-width: unset;
   object-fit: cover;
 }
+.watched {
+  opacity: 0.5;
+
+}
