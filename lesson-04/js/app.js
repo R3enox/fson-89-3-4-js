@@ -45,3 +45,31 @@ for (const word of words) {
 console.log(words);
 
 listEl.after(parEl);
+
+
+
+// ## 3. Створіть контейнер div (з класом numberContainer )в HTML-документі та динамічно створіть 100 блоків (з класом number) наповнивши їх рандомними числами від 1 до 100 і додайте їх до контейнера div(numberContainer). Парні числа повинні мати зелений фон (додати клас even), Непарні числа - жовтий фон (додати клас odd).
+
+const BLOCKS = 100
+
+const randomNumber = () => Math.floor(Math.random() * 100) + 1;
+const divArray = []
+const divContainer = document.createElement("div")
+divContainer.classList.add("number-container")
+for (let index = 0; index < BLOCKS; index += 1) {
+  const divEl = document.createElement("div")
+  divEl.classList.add('number')
+  divEl.textContent = randomNumber()
+  if(divEl.textContent % 2 === 0) {
+divEl.classList.add('even')
+  }
+  else {
+    divEl.classList.add('odd') 
+  }
+  divArray.push(divEl)
+}
+divContainer.append(...divArray)
+console.log(divContainer);
+
+const containerElement = document.querySelector('.film-list')
+containerElement.before(divContainer)
