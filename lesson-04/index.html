@@ -10,7 +10,18 @@
     <h1 id="title">Базові операції з DOM</h1>
 
     <ul class="film-list"></ul>
-
+<form class="contact-form js-contact-form">
+  <input name="userName" type="text" class="contact-form-input js-username-input" data-length="8" required
+    placeholder="Your name" />
+  <label class="js-policy-label">
+    <input type="checkbox" name="accept" class="contact-form-checkbox js-policy-checkbox" />
+    Я <span class="js-username-output">Anonymous</span> погоджуюсь із
+    політикою конфіденційності
+  </label>
+  <button type="submit" class="contact-form-btn js-contact-form-submit">
+    Відправити
+  </button>
+</form>
     <script type="module" src="./js/app.js"></script>
   </body>
 </html>
