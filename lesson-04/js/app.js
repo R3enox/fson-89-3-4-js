@@ -176,6 +176,12 @@ const inputElement = document.querySelector('.js-username-input')
 
 const formEl = document.querySelector('.js-contact-form')
 const newText = document.querySelector('.js-username-output')
+console.dir(inputElement);
+inputElement.required = false;
+inputElement.addEventListener('input', (event) => {
+  return event.currentTarget.value ? newText.textContent = event.currentTarget.value : newText.textContent = 'Anonymous';
+})
+
 formEl.addEventListener('submit', handleSumbit);
 const obj = {
   name: ''
@@ -185,13 +191,34 @@ function handleSumbit (event) {
   const { elements: { userName, accept } } = event.currentTarget;
   if (userName.value  !== '' && accept.checked) {
     obj.name = userName.value;
+    newText.textContent = 'Anonymous';
+    event.currentTarget.reset();
     console.log(obj);
-    newText.textContent = obj.name
     return;
   }
   alert('Заповніть форму!');
   event.currentTarget.reset();
 }
 
+// потрібно створити функцію яка • буде формувати чергу в магазині
+// 1 перший параметр масив, кілікість елементів це кількість покіпців, значення елементу масиву це час який покупець витратить на касі
+// 2 параметр це кількість кас
+
+
+console.log(newArr([1, 3, 4, 5, 15, 6, 12, 23], 4));
+
+function newArr(arr, cash) {
+  const newObj = {};
+  for (let i = 1; i <= cash; i += 1) {
+    newObj[i] = 0;
+  }
+    arr.forEach(item => {
+      const values = Object.values(newObj);
+      const minValue = Math.min(...values); 
+      const currentCash = values.indexOf(minValue) +1;
+      newObj[currentCash] += item;
+    }); 
+  return newObj;
+}
 
 
