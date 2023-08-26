@@ -3,22 +3,64 @@
 //TODO:=========task-01=======Accordion==========
 /**
  * Викоритовуй шаблон акордеон меню з файлу[index.html] та напиши наступний функціонал:
- * при кліку на елемент меню, розкривай блок з текстом.При повторному кліку по елементу,
- * розкритий текст приховується.Нажимаючи на інші елементи меню, попередньо відкриті елементи не закриваються.
+ * при кліку на елемент меню, розкривай блок з текстом. При повторному кліку по елементу,
+ * розкритий текст приховується. Нажимаючи на інші елементи меню, попередньо відкриті елементи не закриваються.
  */
 
-// const listel = document.querySelector('.js-accordion-list');
+const listEl = document.querySelector('.js-accordion-list');
 
-// function handleBtnClick(event) {}
+function handleBtnClick(event) {
+  if (event.target.nodeName !== 'BUTTON') return;
+  event.target.nextElementSibling.classList.toggle('active');
+}
 
-// listEl.addEventListener('click', handleBtnClick);
+listEl.addEventListener('click', handleBtnClick);
 
 //TODO:=========task-02=======Pagination==========
 /**
  * Викоритовуй шаблон пагінації з файлу[index.html] для розробки функціоналу пагінатора.
- * Використовуй поширення подій.Додавай клас`active` на поточну сторінку. Створи допоміжну функцію`updateActivePage`, яка повинна обновляти активний клас.
+ * Використовуй поширення подій. Додавай клас`active` на поточну сторінку. Створи допоміжну функцію`updateActivePage`, яка повинна обновляти активний клас.
  * Функція`handleClick`повинна викликатися коли відбувається клік на елементі`pagination`.
  */
+
+const ulElement = document.querySelector('.js-pagination');
+
+function updateActivePage(event) {
+  const currentElement = event.target;
+
+  if (currentElement.nodeName !== 'LI') return;
+
+  const activeElemnt = ulElement.querySelector('.active');
+
+  if (currentElement.dataset.type === 'prev' && activeElemnt.dataset.page !== '1') {
+    const prevBtnPage = activeElemnt.dataset.page - 1;
+    const prevBtn = ulElement.querySelector(`[data-page='${prevBtnPage}']`);
+    activeElemnt.classList.remove('active');
+    prevBtn.classList.add('active');
+  }
+
+  if (currentElement.dataset.type === 'next') {
+    const nextBtnPage = Number(activeElemnt.dataset.page) + 1;
+    const nextBtn = ulElement.querySelector(`[data-page='${nextBtnPage}']`);
+
+    if (nextBtn) {
+      activeElemnt.classList.remove('active');
+      nextBtn.classList.add('active');
+    }
+  }
+
+  if (
+    currentElement.dataset.page === activeElemnt.dataset.page ||
+    currentElement.dataset.type !== 'page'
+  ) {
+    return;
+  } else {
+    activeElemnt.classList.remove('active');
+    currentElement.classList.add('active');
+  }
+}
+
+ulElement.addEventListener('click', updateActivePage);
 
 //TODO:=========task-03======Modal window===========
 /**
